@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@section Scripts{
+<script src="~/public/js/Common/Contants.js"></script>
+<script src="~/public/js/Entities/BaseEntity.js"></script>
+<script src="~/public/js/Entities/Product.js"></script>
+<script src="~/public/js/Data/SportsStoreCoreDataService.js"></script>
+<script src="~/public/js/UI/ViewModels/SportsStoreProductsViewModel.js"></script>
+<script src="~/public/js/UI/Controllers/StoreProductsController.js"></script>
+<script>
+    $(function () {
+        var controller = new TheStoreCore.UI.SportsStoreProductsController('#test');
+        controller.PageLoad();
+    })   
+</script>
+}
+
+<div id="test">
+    <button data-bind="click: getProducts">Get Products</button>
+</div>

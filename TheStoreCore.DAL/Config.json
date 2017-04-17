@@ -1,0 +1,9 @@
+﻿{
+  "ConnectionStrings": {
+    "TheStoreCore": "Data Source=OWNER-PC\\SQLEXPRESS2012;Initial Catalog=TheStoreCore;Integrated Security=True"
+  },
+  "Api": {
+    "Key": "#{HpsServiceBusAppPass}",
+    "SeedDatabase": false
+  }
+}

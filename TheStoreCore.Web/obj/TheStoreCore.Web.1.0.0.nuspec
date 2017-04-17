@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TheStoreCore.Web</id>
+    <version>1.0.0</version>
+    <authors>TheStoreCore.Web</authors>
+    <owners>TheStoreCore.Web</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp1.1">
+        <dependency id="Microsoft.AspNetCore.StaticFiles" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.App" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc" version="1.1.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ApplicationInsights.AspNetCore" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/netcoreapp1.1/wwwroot/js/jquery-3.2.1.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/js/knockout-3.4.2.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/js/Site.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/public/js/Common/Contants.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/public/js/Data/SportsStoreCoreDataService.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/public/js/Entities/BaseEntity.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/public/js/Entities/Product.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/public/js/UI/Controllers/StoreProductsController.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/wwwroot/public/js/UI/ViewModels/SportsStoreProductsViewModel.js" buildAction="Content" />
+      <files include="any/netcoreapp1.1/Views/Product/List.cshtml" buildAction="Content" />
+      <files include="any/netcoreapp1.1/Views/Shared/Error.cshtml" buildAction="Content" />
+      <files include="any/netcoreapp1.1/Views/Shared/_Layout.cshtml" buildAction="Content" />
+      <files include="any/netcoreapp1.1/Views/_ViewImports.cshtml" buildAction="Content" />
+      <files include="any/netcoreapp1.1/Views/_ViewStart.cshtml" buildAction="Content" />
+      <files include="any/netcoreapp1.1/package.json" buildAction="Content" />
+      <files include="any/netcoreapp1.1/Properties/launchSettings.json" buildAction="Content" />
+      <files include="any/netcoreapp1.1/tsconfig.json" buildAction="Content" />
+      <files include="any/netcoreapp1.1/typings/globals/jquery/typings.json" buildAction="Content" />
+      <files include="any/netcoreapp1.1/typings/globals/knockout/typings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\bin\Debug\netcoreapp1.1\TheStoreCore.Web.runtimeconfig.json" target="lib\netcoreapp1.1\TheStoreCore.Web.runtimeconfig.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\bin\Debug\netcoreapp1.1\TheStoreCore.Web.dll" target="lib\netcoreapp1.1\TheStoreCore.Web.dll" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\js\jquery-3.2.1.js" target="content\wwwroot\js\jquery-3.2.1.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\js\jquery-3.2.1.js" target="contentFiles\any\netcoreapp1.1\wwwroot\js\jquery-3.2.1.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\js\knockout-3.4.2.js" target="content\wwwroot\js\knockout-3.4.2.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\js\knockout-3.4.2.js" target="contentFiles\any\netcoreapp1.1\wwwroot\js\knockout-3.4.2.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\js\Site.js" target="content\wwwroot\js\Site.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\js\Site.js" target="contentFiles\any\netcoreapp1.1\wwwroot\js\Site.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Common\Contants.js" target="content\wwwroot\public\js\Common\Contants.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Common\Contants.js" target="contentFiles\any\netcoreapp1.1\wwwroot\public\js\Common\Contants.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Data\SportsStoreCoreDataService.js" target="content\wwwroot\public\js\Data\SportsStoreCoreDataService.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Data\SportsStoreCoreDataService.js" target="contentFiles\any\netcoreapp1.1\wwwroot\public\js\Data\SportsStoreCoreDataService.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Entities\BaseEntity.js" target="content\wwwroot\public\js\Entities\BaseEntity.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Entities\BaseEntity.js" target="contentFiles\any\netcoreapp1.1\wwwroot\public\js\Entities\BaseEntity.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Entities\Product.js" target="content\wwwroot\public\js\Entities\Product.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\Entities\Product.js" target="contentFiles\any\netcoreapp1.1\wwwroot\public\js\Entities\Product.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\UI\Controllers\StoreProductsController.js" target="content\wwwroot\public\js\UI\Controllers\StoreProductsController.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\UI\Controllers\StoreProductsController.js" target="contentFiles\any\netcoreapp1.1\wwwroot\public\js\UI\Controllers\StoreProductsController.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\UI\ViewModels\SportsStoreProductsViewModel.js" target="content\wwwroot\public\js\UI\ViewModels\SportsStoreProductsViewModel.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\wwwroot\public\js\UI\ViewModels\SportsStoreProductsViewModel.js" target="contentFiles\any\netcoreapp1.1\wwwroot\public\js\UI\ViewModels\SportsStoreProductsViewModel.js" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\Product\List.cshtml" target="content\Views\Product\List.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\Product\List.cshtml" target="contentFiles\any\netcoreapp1.1\Views\Product\List.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\Shared\Error.cshtml" target="content\Views\Shared\Error.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\Shared\Error.cshtml" target="contentFiles\any\netcoreapp1.1\Views\Shared\Error.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\Shared\_Layout.cshtml" target="content\Views\Shared\_Layout.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\Shared\_Layout.cshtml" target="contentFiles\any\netcoreapp1.1\Views\Shared\_Layout.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\_ViewImports.cshtml" target="content\Views\_ViewImports.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\_ViewImports.cshtml" target="contentFiles\any\netcoreapp1.1\Views\_ViewImports.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\_ViewStart.cshtml" target="content\Views\_ViewStart.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Views\_ViewStart.cshtml" target="contentFiles\any\netcoreapp1.1\Views\_ViewStart.cshtml" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\package.json" target="content\package.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\package.json" target="contentFiles\any\netcoreapp1.1\package.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Properties\launchSettings.json" target="content\Properties\launchSettings.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\Properties\launchSettings.json" target="contentFiles\any\netcoreapp1.1\Properties\launchSettings.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\tsconfig.json" target="content\tsconfig.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\tsconfig.json" target="contentFiles\any\netcoreapp1.1\tsconfig.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\typings\globals\jquery\typings.json" target="content\typings\globals\jquery\typings.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\typings\globals\jquery\typings.json" target="contentFiles\any\netcoreapp1.1\typings\globals\jquery\typings.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\typings\globals\knockout\typings.json" target="content\typings\globals\knockout\typings.json" />
+    <file src="C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Web\typings\globals\knockout\typings.json" target="contentFiles\any\netcoreapp1.1\typings\globals\knockout\typings.json" />
+  </files>
+</package>
