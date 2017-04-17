@@ -5,16 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using TheStoreCore.DAL.TheStoreCore.Entities.App;
 using TheStoreCore.DAL.TheStoreCore.Repositories.Abstract;
+using TheStoreCore.DAL.TheStoreCore.Services.Abstract;
 
 namespace TheStoreCore.DAL.TheStoreCore.Api
 {
     public class ProductController : Controller
     {
-        private IEntityRepository<Product> _productRepository;
+        private IProductService _productService;
 
-        public ProductController(IEntityRepository<Product> productRepository)
+        public ProductController(IProductService productService)
         {
-            _productRepository = productRepository;
+            _productService = productService;
         }
 
         [Route("api/products/getProducts")]
@@ -23,7 +24,7 @@ namespace TheStoreCore.DAL.TheStoreCore.Api
         {
             try
             {
-                return Ok(_productRepository.FindAll());
+                return Ok(_productService.GetProducts());
             }
             catch (Exception ex)
             {
@@ -37,7 +38,7 @@ namespace TheStoreCore.DAL.TheStoreCore.Api
         {
             try
             {
-                var product = _productRepository.FindById(id);
+                var product = _productService.GetProduct(id);
                 if (product == null)
                     return NotFound();
 
@@ -57,9 +58,8 @@ namespace TheStoreCore.DAL.TheStoreCore.Api
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                _productRepository.Create(product);
-                _productRepository.Commit();
-                return Ok(product);
+                var newProduct = _productService.CreateProduct(product);
+                return Ok(newProduct);
             }
             catch (Exception ex)
             {
@@ -74,8 +74,7 @@ namespace TheStoreCore.DAL.TheStoreCore.Api
             {
                 if (id == product.Id && ModelState.IsValid)
                 {
-                    _productRepository.Update(product);
-                    _productRepository.Commit();
+                    _productService.UpdateProduct(product);
                     return Ok();
                 }
                 return BadRequest();

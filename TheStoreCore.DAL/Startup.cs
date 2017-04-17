@@ -13,6 +13,8 @@ using TheStoreCore.DAL.TheStoreCore.Repositories.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TheStoreCore.DAL.Migrations.SeedData;
+using TheStoreCore.DAL.TheStoreCore.Services.Abstract;
+using TheStoreCore.DAL.TheStoreCore.Services;
 
 namespace TheStoreCore.DAL
 {
@@ -62,8 +64,10 @@ namespace TheStoreCore.DAL
 
             services.AddMvc();
             //Injections
+            //Move to new DI injector for a bigger project
             services.AddTransient<IDatabaseContext, DataContext>();
             services.AddTransient<IDbSession, DbSession>();
+            services.AddTransient<IProductService, ProductService>();
             services.AddScoped(typeof(IEntityRepository<>), typeof(EntityRepository<>));
         }
 

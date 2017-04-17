@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="TheStoreCore.Services\" />
     <Folder Include="TheStoreCore.Identity\" />
     <Folder Include="TheStoreCore.Entities.Abstractions\" />
     <Folder Include="TheStoreCore.Common\" />
