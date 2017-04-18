@@ -1,0 +1,9 @@
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\bin\Debug\netcoreapp1.1\TheStoreCore.DAL.deps.json
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\bin\Debug\netcoreapp1.1\TheStoreCore.DAL.runtimeconfig.json
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\bin\Debug\netcoreapp1.1\TheStoreCore.DAL.runtimeconfig.dev.json
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\bin\Debug\netcoreapp1.1\TheStoreCore.DAL.dll
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\bin\Debug\netcoreapp1.1\TheStoreCore.DAL.pdb
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\obj\Debug\netcoreapp1.1\TheStoreCore.DAL.AssemblyInfo.cs
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\obj\Debug\netcoreapp1.1\TheStoreCore.DAL.dll
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\obj\Debug\netcoreapp1.1\TheStoreCore.DAL.pdb
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.DAL\obj\Debug\netcoreapp1.1\TheStoreCore.DAL.csprojResolveAssemblyReference.cache

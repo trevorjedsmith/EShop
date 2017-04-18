@@ -76,6 +76,18 @@ namespace TheStoreCore.DAL
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             SeedData.EnsurePopulated(app);
+            app.UseCors(corsBuilder =>
+            {
+
+                corsBuilder = corsBuilder.AllowAnyOrigin();
+
+                corsBuilder = corsBuilder.AllowAnyHeader();
+
+                corsBuilder = corsBuilder.AllowAnyMethod();
+
+                corsBuilder = corsBuilder.AllowCredentials();
+
+            });
             app.UseMvc();
         }
     }

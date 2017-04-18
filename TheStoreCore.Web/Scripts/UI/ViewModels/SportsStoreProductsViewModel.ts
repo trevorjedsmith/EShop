@@ -9,18 +9,27 @@
 
         private products: KnockoutObservableArray<Entities.Product>;
 
+        //Paging Info
+        private totalPages: number;
+        private itemsPerPage: number;
+        private currentPage: number;
+
         constructor(dataService: TheStoreCore.Data.TheStoreCoreDataService<entity.Product>) {
             this.dataServices = dataService;
             this.products = ko.observableArray([]);
         }
 
         getProducts() {
-            this.dataServices.Get().done((data) => {
+            this.dataServices.ExecuteGet(this.dataServices.baseUri).done((retData: any) =>
+            {
                 this.products.removeAll();
-                this.products.push(data);
-            });
-        }
+                this.products.push.apply(this.products, retData.data.products);
+                this.totalPages = retData.data.pagingInfo.totalPages;
+                this.itemsPerPage = retData.data.pagingInfo.itemsPerPage;
+                this.currentPage = retData.data.pagingInfo.currentPage;
+            }).fail((error) => { console.log(error) });
 
+        }
        
     }
 }

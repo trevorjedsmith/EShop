@@ -4,10 +4,13 @@ namespace TheStoreCore.Data {
     export class TheStoreCoreDataService<T extends Entities.BaseEntity>{
 
         ajaxService: JQueryStatic;
+
         baseUri: string;
 
         constructor(ajaxService: JQueryStatic, controllerName: string) {
+
             this.ajaxService = ajaxService;
+            this.ajaxService.ajaxSettings.crossDomain = true;
             this.baseUri = `${Constants.BaseServiceBusUrl}${controllerName}`;
 
         }

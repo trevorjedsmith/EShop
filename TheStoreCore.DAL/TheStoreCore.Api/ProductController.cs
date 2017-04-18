@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using TheStoreCore.DAL.TheStoreCore.Entities.App;
 using TheStoreCore.DAL.TheStoreCore.Repositories.Abstract;
 using TheStoreCore.DAL.TheStoreCore.Services.Abstract;
+using TheStoreCore.DAL.TheStoreCore.ViewModels;
 
 namespace TheStoreCore.DAL.TheStoreCore.Api
 {
     public class ProductController : Controller
     {
         private IProductService _productService;
+
+        public int PageSize = 4;
 
         public ProductController(IProductService productService)
         {
@@ -20,11 +23,26 @@ namespace TheStoreCore.DAL.TheStoreCore.Api
 
         [Route("api/products/getProducts")]
         [HttpGet]
-        public IActionResult GetProducts()
+        public IActionResult GetProducts(int page = 1)
         {
             try
             {
-                return Ok(_productService.GetProducts());
+                var pagedProducts = _productService.GetProducts()
+                                                   .OrderBy(p => p.Id)
+                                                   .Skip((page - 1) * PageSize)
+                                                   .Take(PageSize);
+
+                var productListVM = new ProductListViewModel
+                {
+                    Products = pagedProducts,
+                    PagingInfo = new Models.PagingInfo
+                    {
+                        CurrentPage = page,
+                        ItemsPerPage = PageSize,
+                        TotalItems = _productService.GetProducts().Count()
+                    }
+                };
+                return Ok(new {data = productListVM });
             }
             catch (Exception ex)
             {
