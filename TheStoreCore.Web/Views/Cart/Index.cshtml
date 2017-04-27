@@ -1,0 +1,56 @@
+﻿@section Scripts{
+    <script src="~/public/js/Common/Contants.js"></script>
+    <script src="~/public/js/Entities/BaseEntity.js"></script>
+    <script src="~/public/js/Entities/Cart.js"></script>
+    <script src="~/public/js/Data/SportsStoreCoreDataService.js"></script>
+    <script src="~/public/js/UI/ViewModels/StoreCartViewModel.js"></script>
+    <script src="~/public/js/UI/Controllers/StoreCartController.js"></script>
+    <script>
+    $(function () {
+        var controller = new TheStoreCore.UI.TheStoreCartController();
+        controller.PageLoad();
+    })
+    </script>
+}
+
+<h2 class="text-center" style="color:lightgray">Your Cart</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Item</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ko foreach: cartItems -->
+        <tr>
+            <td class="text-center" data-bind="text: $data.quantity"></td>
+            <td class="text-center" data-bind="text: $data.product.name"></td>
+            <td class="text-center" data-bind="text: '$' + $data.product.price.toFixed(2)"></td>
+            <td class="text-center" data-bind="text: '$' + ($data.quantity * $data.product.price).toFixed(2)"></td>
+            <td class="text-center"><button class="btn btn-sm btn-success" data-bind="click: $parent.addToCart"><i class="fa fa-plus"></i></button></td>
+            <td class="text-center"><button class="btn btn-sm btn-danger" data-bind="click: $parent.removeFromCart"><i class="fa fa-minus"></i></button></td>
+        </tr>
+        <!-- /ko -->
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+            <td>Total:</td>
+            <th class="text-right" data-bind="text: '$' + cartTotal().toFixed(2)"></th>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+<div class="text-center">
+    <button class="btn btn-primary" data-bind="click: continueShopping">Continue Shopping</button>
+    <button class="btn btn-primary" data-bind="click: checkOut, enable: cartTotal() > 0">Submit Order</button>
+</div>
+
+
+

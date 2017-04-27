@@ -36,7 +36,7 @@ namespace TheStoreCore.Data {
 
         // PUT api/{controller}/5
         Put(item: T): JQueryPromise<T> {
-            let url = `${this.baseUri}/${item.Id}`;
+            let url = `${this.baseUri}/${item.id}`;
             return this.ExecutePut<T>(url, item);
         }
 
@@ -109,6 +109,28 @@ namespace TheStoreCore.Data {
                     contentType: Constants.BaseContentType,
                     type: Constants.BasePUTMethod,
                     data: payload
+                };
+
+            let me = this;
+            this.ajaxService.ajax(config)
+                .fail(function (xhr, textStatus, errorThrown) {
+                    dfd.reject();
+                })
+                .done((data) => {
+                    dfd.resolve(data);
+                });
+
+            return dfd.promise();
+        }
+
+        public ExecuteDelete<T>(url: string, id:number): JQueryPromise<any> {
+            const dfd = this.ajaxService.Deferred();
+
+            //var payload = JSON.stringify(params),
+            var config = {
+                    url: url + '/' + id,
+                    contentType: Constants.BaseContentType,
+                    type: Constants.BaseDeleteMethod
                 };
 
             let me = this;

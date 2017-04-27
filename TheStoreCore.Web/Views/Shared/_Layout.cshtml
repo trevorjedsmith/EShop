@@ -5,20 +5,19 @@
     <title>The Store</title>
     <script src="~/js/jquery-3.2.1.js"></script>
     <script src="~/js/knockout-3.4.2.js"></script>
-    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/css/bs/js/bootstrap.js"></script>
+    <link href="~/css/bs/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bs/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/css/fa/css/font-awesome.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse" role="navigation">
-        <a class="navbar-brand" href="#">SPORTS STORE</a>
+    <div class="navbar navbar-default" role="navigation">
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-barcode"></i>
+                THE STORE CORE
+            </a>
     </div>
-    <div class="row panel">
-        <div id="categories" class="col-xs-3">
-            Put something useful here later
-        </div>
-        <div class="col-xs-8">
-            @RenderBody()
-        </div>
-    </div>
-        @RenderSection("Scripts", false)
+    @RenderBody()
+    @RenderSection("Scripts", false)
 </body>
 </html>

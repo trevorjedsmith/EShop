@@ -7080,10 +7080,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\owner\\documents\\visual studio 2017\\Projects\\TheStore\\TheStoreCore.Services\\TheStoreCore.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\documents\\visual studio 2017\\Projects\\TheStore\\TheStoreCore.Services\\TheStoreCore.Services.csproj",
       "projectName": "TheStoreCore.Services",
-      "projectPath": "c:\\users\\owner\\documents\\visual studio 2017\\Projects\\TheStore\\TheStoreCore.Services\\TheStoreCore.Services.csproj",
-      "outputPath": "c:\\users\\owner\\documents\\visual studio 2017\\Projects\\TheStore\\TheStoreCore.Services\\obj\\",
+      "projectPath": "C:\\Users\\Owner\\documents\\visual studio 2017\\Projects\\TheStore\\TheStoreCore.Services\\TheStoreCore.Services.csproj",
+      "outputPath": "C:\\Users\\Owner\\documents\\visual studio 2017\\Projects\\TheStore\\TheStoreCore.Services\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

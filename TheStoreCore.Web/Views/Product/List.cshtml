@@ -9,33 +9,75 @@
 <script src="~/public/js/Entities/BaseEntity.js"></script>
 <script src="~/public/js/Entities/Product.js"></script>
 <script src="~/public/js/Data/SportsStoreCoreDataService.js"></script>
-<script src="~/public/js/UI/ViewModels/SportsStoreProductsViewModel.js"></script>
+<script src="~/public/js/UI/ViewModels/StoreProductsViewModel.js"></script>
 <script src="~/public/js/UI/Controllers/StoreProductsController.js"></script>
 <script>
     $(function () {
-        var controller = new TheStoreCore.UI.SportsStoreProductsController('#test');
+        var controller = new TheStoreCore.UI.TheStoreProductsController();
         controller.PageLoad();
     })   
 </script>
 }
+<style>
+    .home{
+        margin-bottom:5px;
+    }
+</style>
+<div class="row">
+    <div style="margin-right:30px;" class="pull-right">
+        <div id="cart-details">
+            <a id="cart" href="@Url.Action("Index","Cart")" data-bind="click: showCart">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <span class="badge" data-bind="text: cartCount"></span>
+            </a>
+            <div id="cart-summary" style="display:none">
+                <span data-bind="visible: cartItems().length == 0">
+                    You currently have no items in your cart.
+                </span>
+                <div data-bind="visible:cartItems().length > 0">
+                    <ul>
+                        <!-- ko foreach : {data:cartItems, afterAdd: fadeIn} -->
+                        <li data-bind="text: $data.product.name"></li>
+                        <!-- /ko -->
+                    </ul>
+                    <p><strong>Total:</strong>$<span data-bind="text: total"></span></p>
+                    <br /><a href="@Url.Action("Index","Cart")" class="btn btn-primary">
+                        View Cart Details
+                    </a>
+                </div>
+            </div>
 
-<div id="test">
-    <button data-bind="click: getProducts">Get Products</button>
-</div>
-
-<div data-bind="foreach: products">
-    <div class="well">
-        <h3>
-            <strong data-bind="text: $data.name"></strong>
-            <span class="pull-right label label-primary"
-                  data-bind="text: ('$' + $data.price.toFixed(2))"></span>
-        </h3>
-        <span class="lead" data-bind="text: $data.description"></span>
-        <div class="pull-right">
-            <button class="btn btn-success">
-                Add to Cart
-            </button>
         </div>
     </div>
+</div>
+<div id="product-details">
+    <div class="col-xs-3">
+        <button class="btn btn-block btn-default btn-lg home" data-bind="click: setCategory(null)">
+            Home
+        </button>
+        <div data-bind="foreach: categories">
+            <button class="btn btn-block btn-default btn-lg" data-bind="click: $parent.setCategory, text: $data, css:{'btn-primary' : $data == $parent.selectedCategory}"></button>
+        </div>
+    </div>
+
+    <div class="col-xs-8">
+        <div data-bind="foreach: products">
+            <div class="well">
+                <h3>
+                    <strong data-bind="text: $data.name"></strong>
+                    <span class="pull-right label label-primary"
+                          data-bind="text: ('$' + $data.price.toFixed(2))"></span>
+                </h3>
+                <span class="lead" data-bind="text: $data.description"></span>
+                <div class="pull-right">
+                    <button class="btn btn-success" data-bind="click: $parent.addToCart">
+                        Add to Cart
+                        <i class="fa fa-plus-square"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 

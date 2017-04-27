@@ -1,0 +1,43 @@
+﻿@using TheStoreCore.Web.Helpers
+
+
+<script src="~/public/js/Common/Contants.js"></script>
+<script src="~/public/js/Entities/BaseEntity.js"></script>
+<script src="~/public/js/Entities/Cart.js"></script>
+<script src="~/public/js/Data/SportsStoreCoreDataService.js"></script>
+<script src="~/Scripts/Custom/knockout.custom.js"></script>
+<script src="~/public/js/UI/ViewModels/StoreCartSummaryViewModel.js"></script>
+<script src="~/public/js/UI/Controllers/StoreCartSummaryController.js"></script>
+
+<script>
+        $(function () {
+            var controller = new TheStoreCore.UI.TheStoreCartSummaryController();
+            controller.PageLoad();
+        })
+</script>
+
+<div id="cart-details">
+    <a id="cart" href="@Url.Action("Index","Cart")" data-bind="click: showCart">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <span class="badge" data-bind="text: cartItems().length"></span>
+    </a>
+    <div id="cart-summary" style="display:none">
+        <span data-bind="visible: cartItems().length == 0">
+            You currently have no items in your cart.
+        </span>
+        <div data-bind="visible:cartItems().length > 0">
+            <ul>
+                <!-- ko foreach : {data:cartItems, afterAdd: fadeIn} -->
+                <li data-bind="text: $data.product.name"></li>
+                <!-- /ko -->
+            </ul>
+            <p><strong>Total:</strong>$<span data-bind="text:total"></span></p>
+            <br /><a href="@Url.Action("Index","Cart")" class="btn btn-primary">
+                View Cart Details
+            </a>
+        </div>
+    </div>
+
+</div>
+
+

@@ -3,20 +3,16 @@ var TheStoreCore;
     var UI;
     (function (UI) {
         var data = TheStoreCore.Data;
-        var SportsStoreProductsController = (function () {
-            function SportsStoreProductsController(containerElementId) {
+        var TheStoreProductsController = (function () {
+            function TheStoreProductsController() {
                 this.dataService = new data.TheStoreCoreDataService($, 'products/getProducts');
-                this.containerElementId = containerElementId;
-                console.log(this.containerElementId);
             }
-            SportsStoreProductsController.prototype.PageLoad = function () {
-                var container = $('#test');
-                console.log(container);
-                var viewModel = new TheStoreCore.UI.SportsStoreProductsViewModel(this.dataService);
+            TheStoreProductsController.prototype.PageLoad = function () {
+                var viewModel = new TheStoreCore.UI.TheStoreProductsViewModel(this.dataService);
                 ko.applyBindings(viewModel);
             };
-            return SportsStoreProductsController;
+            return TheStoreProductsController;
         }());
-        UI.SportsStoreProductsController = SportsStoreProductsController;
+        UI.TheStoreProductsController = TheStoreProductsController;
     })(UI = TheStoreCore.UI || (TheStoreCore.UI = {}));
 })(TheStoreCore || (TheStoreCore = {}));

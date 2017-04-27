@@ -1,0 +1,6 @@
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Services\bin\Debug\netcoreapp1.1\TheStoreCore.Services.deps.json
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Services\bin\Debug\netcoreapp1.1\TheStoreCore.Services.dll
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Services\bin\Debug\netcoreapp1.1\TheStoreCore.Services.pdb
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Services\obj\Debug\netcoreapp1.1\TheStoreCore.Services.AssemblyInfo.cs
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Services\obj\Debug\netcoreapp1.1\TheStoreCore.Services.dll
+C:\Users\Owner\documents\visual studio 2017\Projects\TheStore\TheStoreCore.Services\obj\Debug\netcoreapp1.1\TheStoreCore.Services.pdb

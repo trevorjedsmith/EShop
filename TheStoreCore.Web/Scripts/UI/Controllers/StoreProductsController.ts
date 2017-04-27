@@ -3,20 +3,16 @@
     import data = TheStoreCore.Data;
     import entity = TheStoreCore.Entities;
 
-    export class SportsStoreProductsController {
+    export class TheStoreProductsController {
         private dataService: TheStoreCore.Data.TheStoreCoreDataService<entity.Product>;
         private containerElementId: string;
 
-        constructor(containerElementId: string) {
+        constructor() {
             this.dataService = new data.TheStoreCoreDataService($, 'products/getProducts');
-            this.containerElementId = containerElementId;
-            console.log(this.containerElementId);
         }
 
         PageLoad() {
-            let container = $('#test');
-            console.log(container);
-            let viewModel = new TheStoreCore.UI.SportsStoreProductsViewModel(this.dataService);
+            let viewModel = new TheStoreCore.UI.TheStoreProductsViewModel(this.dataService);
             ko.applyBindings(viewModel);
         }
 

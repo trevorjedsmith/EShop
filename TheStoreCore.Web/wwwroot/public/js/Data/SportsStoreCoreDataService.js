@@ -26,7 +26,7 @@ var TheStoreCore;
             };
             // PUT api/{controller}/5
             TheStoreCoreDataService.prototype.Put = function (item) {
-                var url = this.baseUri + "/" + item.Id;
+                var url = this.baseUri + "/" + item.id;
                 return this.ExecutePut(url, item);
             };
             // DELETE api/{controller}/5
@@ -85,6 +85,24 @@ var TheStoreCore;
                     contentType: TheStoreCore.Constants.BaseContentType,
                     type: TheStoreCore.Constants.BasePUTMethod,
                     data: payload
+                };
+                var me = this;
+                this.ajaxService.ajax(config)
+                    .fail(function (xhr, textStatus, errorThrown) {
+                    dfd.reject();
+                })
+                    .done(function (data) {
+                    dfd.resolve(data);
+                });
+                return dfd.promise();
+            };
+            TheStoreCoreDataService.prototype.ExecuteDelete = function (url, id) {
+                var dfd = this.ajaxService.Deferred();
+                //var payload = JSON.stringify(params),
+                var config = {
+                    url: url + '/' + id,
+                    contentType: TheStoreCore.Constants.BaseContentType,
+                    type: TheStoreCore.Constants.BaseDeleteMethod
                 };
                 var me = this;
                 this.ajaxService.ajax(config)

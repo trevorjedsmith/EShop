@@ -5,20 +5,84 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\css\bs\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\css\bs\css\bootstrap-theme.css.map" />
+    <Content Include="wwwroot\css\bs\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\css\bs\css\bootstrap-theme.min.css.map" />
+    <Content Include="wwwroot\css\bs\css\bootstrap.css" />
+    <Content Include="wwwroot\css\bs\css\bootstrap.css.map" />
+    <Content Include="wwwroot\css\bs\css\bootstrap.min.css" />
+    <Content Include="wwwroot\css\bs\css\bootstrap.min.css.map" />
+    <Content Include="wwwroot\css\bs\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\css\bs\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\css\bs\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\css\bs\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\css\bs\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\css\bs\js\bootstrap.js" />
+    <Content Include="wwwroot\css\bs\js\bootstrap.min.js" />
+    <Content Include="wwwroot\css\bs\js\npm.js" />
+    <Content Include="wwwroot\css\fa\css\font-awesome.css" />
+    <Content Include="wwwroot\css\fa\css\font-awesome.min.css" />
+    <Content Include="wwwroot\css\fa\font-awesome.css" />
+    <Content Include="wwwroot\css\fa\FontAwesome.otf">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\css\fa\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\css\fa\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\css\fa\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\css\fa\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\css\fa\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\css\fa\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\css\fa\less\animated.less" />
+    <Content Include="wwwroot\css\fa\less\bordered-pulled.less" />
+    <Content Include="wwwroot\css\fa\less\core.less" />
+    <Content Include="wwwroot\css\fa\less\fixed-width.less" />
+    <Content Include="wwwroot\css\fa\less\font-awesome.less" />
+    <Content Include="wwwroot\css\fa\less\icons.less" />
+    <Content Include="wwwroot\css\fa\less\larger.less" />
+    <Content Include="wwwroot\css\fa\less\list.less" />
+    <Content Include="wwwroot\css\fa\less\mixins.less" />
+    <Content Include="wwwroot\css\fa\less\path.less" />
+    <Content Include="wwwroot\css\fa\less\rotated-flipped.less" />
+    <Content Include="wwwroot\css\fa\less\screen-reader.less" />
+    <Content Include="wwwroot\css\fa\less\stacked.less" />
+    <Content Include="wwwroot\css\fa\less\variables.less" />
+    <Content Include="wwwroot\css\fa\scss\font-awesome.scss" />
+    <Content Include="wwwroot\css\fa\scss\_animated.scss" />
+    <Content Include="wwwroot\css\fa\scss\_bordered-pulled.scss" />
+    <Content Include="wwwroot\css\fa\scss\_core.scss" />
+    <Content Include="wwwroot\css\fa\scss\_fixed-width.scss" />
+    <Content Include="wwwroot\css\fa\scss\_icons.scss" />
+    <Content Include="wwwroot\css\fa\scss\_larger.scss" />
+    <Content Include="wwwroot\css\fa\scss\_list.scss" />
+    <Content Include="wwwroot\css\fa\scss\_mixins.scss" />
+    <Content Include="wwwroot\css\fa\scss\_path.scss" />
+    <Content Include="wwwroot\css\fa\scss\_rotated-flipped.scss" />
+    <Content Include="wwwroot\css\fa\scss\_screen-reader.scss" />
+    <Content Include="wwwroot\css\fa\scss\_stacked.scss" />
+    <Content Include="wwwroot\css\fa\scss\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
-    <Folder Include="Views\Shared\" />
+    <Folder Include="TheStoreCore.Entities.Abstractions\" />
+    <Folder Include="TheStoreCore.Identity\" />
     <Folder Include="Views\Product\" />
-    <Folder Include="wwwroot\css\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TheStoreCore.DAL\TheStoreCore.DAL.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
   </ItemGroup>
 
 </Project>
